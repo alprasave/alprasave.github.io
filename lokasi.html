@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi Universitas Teknokrat Indonesia</title>
+    <style>
+      /* CSS untuk menampilkan peta */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+      img {
+        display: block;
+        margin: 0 auto;}
+    </style>
+  </head>
+  <body>
+    <h1>Lokasi Universitas Teknokrat Indonesia</h1>
+
+    <!-- Menampilkan alamat -->
+    <p>Alamat: Jalan Zainal Abidin Pagar Alam 9 -11 35142 Bandar Lampung Lampung</p>
+
+    <!-- Menampilkan peta -->
+    <div id="map"></div>
+
+    <!-- Kode script untuk Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
+    <script>
+      function initMap() {
+        // Menentukan koordinat lokasi Universitas Teknokrat Indonesia
+        var teknokrat = {lat: -5.4022439, lng: 105.2579493};
+
+        // Membuat objek map dengan koordinat dan zoom level yang ditentukan
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: teknokrat,
+          zoom: 17
+        });
+
+        // Menambahkan marker pada lokasi Universitas Teknokrat Indonesia
+        var marker = new google.maps.Marker({
+          position: teknokrat,
+          map: map,
+          title: 'Universitas Teknokrat Indonesia'
+        });
+      }
+    </script>
+
+    <!-- Memanggil fungsi initMap() saat halaman selesai dimuat -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+    </script>
+
+    <!-- Menampilkan gambar peta -->
+    <img src="map tekno.png" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </body>
+</html>

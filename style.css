@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  background-color: #800000;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+h1 {
+    text-align: center; /* Rata tengah */
+    color: #800000; /* Warna merah #800000 */
+  }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+ 
+}
+
+nav a:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+footer {
+    border-top: 1px solid #cccccc;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
